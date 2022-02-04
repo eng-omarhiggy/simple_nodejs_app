@@ -8,7 +8,7 @@ pipeline {
             steps {
                 sh ''' 
                     docker build -t nodejs:lts .
-                    docker run -p 3000:3000 nodejs:lts
+                    docker run -d -p 3000:3000 nodejs:lts
                 '''
             }
         }
